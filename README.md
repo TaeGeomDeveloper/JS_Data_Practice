@@ -4,19 +4,19 @@
 ## 1. import 가져오기, export 내보네기 
 < _main.js_, _getType.js_, _getRandom.js_ 참조 >
 
-- lodash import
+- **Main Import**
   ```javascript
       import _ from 'lodash'; // From `node_modules`!
       import getType from './getType'
       import { random, user as taegeom } from './getrandom'
   ```
-- getType
+- **getType export**
    ```javascript
     export default function getType(data) {
     return Object.prototype.toString.call(data).slice(8,0);
    }
    ```
-- getRandom
+- **getRandom export**
   ```jvascript
     export function random () {
     return Math.floor(Math.random() *10)
@@ -28,3 +28,27 @@
   ```
 
 ## 2. lodash 사용법
+< _Lodash.js_ 참조 >
+
+- 하나의 특정 배열에서 중복 제외 **uniqBy**
+  ```javascript
+    console.log('uniqBy', _.uniqBy(usersC, 'name'))
+  ```
+- 여러개의 특정 배열을 합치면서 중복 제외 **unionBy**
+  ```javascript
+    const usersD = _.unionBy(usersA,usersB, 'name')
+  ```
+
+- 배열에서 데이터를 찾기 **find**, **findIndex**
+  ```javascript
+    const foundUser = _.find(users, { name: 'Amy'})
+    const foundUserIndex = _.findIndex(users, {name: 'Amy'})
+  ```
+- 배열에서 제거 한다 **remove**
+  ```javascript
+    _.remove(users, {name: 'Taegeom'})
+  ```
+
+## 3. JSON
+
+## 4. Storage
