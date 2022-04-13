@@ -49,6 +49,17 @@
     _.remove(users, {name: 'Taegeom'})
   ```
 
-## 3. JSON
+## 3. JSON (JavaScript Ovject Notation)
+자바스크립트 객체 표기법
+< _JSON.js_ 참조 >
+
+- **stringify**
+  ```javascript
+    const str = JSON.stringify(user)
+  ```
+- **parse**
+  ```javascript
+    const obj = JSON.parse(str)
+  ```
 
 ## 4. Storage
