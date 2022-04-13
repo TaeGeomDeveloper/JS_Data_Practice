@@ -53,13 +53,32 @@
 자바스크립트 객체 표기법
 < _JSON.js_ 참조 >
 
-- **stringify**
+- 문자화 **stringify**
   ```javascript
     const str = JSON.stringify(user)
   ```
-- **parse**
+- 정수화 **parse**
   ```javascript
     const obj = JSON.parse(str)
   ```
 
-## 4. Storage
+## 4. 저장소 Storage
+
+- Local Storage
+  ```javascript
+    // Local Storage / setItem
+    localStorage.setItem('user', JSON.stringify(user))
+
+    //console.log(localStorage.getItem('user'))
+    console.log(JSON.parse(localStorage.getItem('user')))
+
+    const str2 = localStorage.getItem('user')
+    const obj2 = JSON.parse(str2)
+
+    obj2.age = 2
+    console.log(obj2)
+    localStorage.setItem('user', JSON.stringify(obj2))
+
+    // Local Storage / removeItem
+    //localStorage.removeItem('user')
+  ```
